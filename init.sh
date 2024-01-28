@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir /app/logs
 python /app/init_mongo.py
 
 celery -A celery_app worker --loglevel=info &
